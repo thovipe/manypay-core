@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Payment {
+
     @JsonProperty("Installments")
     private int numberOfInstallments;
     @JsonProperty("Amount")

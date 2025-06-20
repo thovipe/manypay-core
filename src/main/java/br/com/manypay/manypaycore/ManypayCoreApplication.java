@@ -18,10 +18,10 @@ public class ManypayCoreApplication implements CommandLineRunner {
 
     public void run(String... args) throws Exception {
 
-        PaymentProvider cieloAquirer = new CieloProvider(REDACTED);
+        PaymentProvider cieloAquirer = new CieloProvider();
         RequestApi cieloRequest = new RequestApi(cieloAquirer);
         PaymentStrategy creditStrategy = new CreditStrategy();
-        CreditCard creditCard = new CreditCard(REDACTED);
+        CreditCard creditCard = new CreditCard();
         CreditPayment creditPayment = new CreditPayment(1, 200, creditStrategy, true);
         FacadeTransaction cieloCreditTransaction = new FacadeTransaction(cieloAquirer, cieloRequest, creditStrategy, creditCard, creditPayment);
 

@@ -3,6 +3,7 @@ package br.com.manypay.manypaycore.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Customer {
+
     @JsonProperty("Name")
     private String name;
 
